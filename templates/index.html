@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://kit.fontawesome.com/b08614ab99.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form action="{{url_for('index')}}" id="app" method="POST">
+        <div id="">
+            <h1>Weather App</h1>
+            <div>
+                <input id="red" type="text" placeholder="search by location"name="spot">
+                <button>Search</button>
+            </div>
+            <div id="pic">
+                <img src="../static/images/03_iday.svg">
+            </div>
+        
+            
+        </div>
+        </form>
+        <div class="card">
+            <div class="main">
+                <div class="photo">
+                    <img src="../static/images/lo.png">
+                </div>
+                <div class="text">
+                    <b>Location</b>
+                    <p>{{data}}</p>
+                </div>
+                
+                
+            </div>
+            <div class="main">
+                <div class="photo" >
+                    <img src="../static/images/glob.png">
+                </div>
+                <div class="text">
+                    <b>Country</b>
+                    <p>{{sys}}</p>
+                </div>
+            </div>
+            <div class="main">
+                <div class="photo">
+                    <img src="../static/images/5.png">
+                </div>
+                <div  class="text" >
+                    <b>Temperature</b>
+                    <p>{{temperature}}°C</p>
+        
+                </div>
+            </div>
+            <div class="main">
+                <div class="photo">
+                    <img src="../static/images/6.png">
+                </div>
+                <div class="text">
+                    <b>Humidity</b>
+                    <p>{{humidity}}%</p>
+                </div>
+            </div>
+            <div class="main">
+                <div class="photo">
+                    <img src="../static/images/7.png">
+                </div>
+                <div class="text">
+                    <b>Wind Speed</b>
+                    <p>{{wind}}km/h</p>
+                </div>
+                    
+            </div>
+            <div class="main">
+                <div class="photo">
+                    <img src="../static/images/Screenshot_from_2022-09-24_20-13-51-removebg-preview.png">
+                </div>
+                <div class="text">
+                    <b>Pressure</b>
+                    <p>{{pressure}}"Hg</p>
+                </div>
+            </div>
+            <div class="main">
+                <div class="photo">
+                    <img src="../static/images/2.png">
+
+                </div>
+                <div>
+                    <b>Weather<br> Condition</b>
+                    <p>{{pathu}}</p>
+                </div>
+            </div>
+                
+                
+        </div>
+        
+
+        
+    <script src="../static/script.js"></script>
+    </body>
+</html>
